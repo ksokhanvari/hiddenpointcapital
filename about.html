@@ -11,7 +11,7 @@
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html"><img src="images/logo.png" alt="Hidden Point Capital"></a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
       <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="about.html">About</a></li>
@@ -22,32 +22,39 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>About</h1>
+  <section class="hero compact" style="background-image:url('images/about.png')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">About us</p>
+      <h1>Helping investors succeed in evolving markets</h1>
     </div>
   </section>
 
   <section class="section">
-    <div class="container split">
+    <div class="container split reverse reveal">
       <div>
+        <p class="eyebrow-dark">Who we are</p>
         <p class="lead">Hidden Point Capital strives to help investors succeed in ever-evolving markets by researching and analyzing the dynamics of market behavior and potential returns.</p>
         <p>We focus on the ever-changing relationship between volatility and return in the financial markets, and employ proprietary risk-control methods and technology, designed to shield investors from the disruptive effects of surging volatility and extreme loss while helping investors focus on their goal of growing their investment portfolio.</p>
         <p>We combine massive amounts of data, world-class computing power, and financial expertise to develop sophisticated investment models. And we use technology in an effort to constantly refine our investment process and our insights into how the markets will behave.</p>
         <p>For more information please <a href="contact.html">contact us</a>.</p>
       </div>
-      <div>
-        <img src="images/about.png" alt="Hidden Point Capital">
+      <div class="media">
+        <img src="images/approach-market-analysis.jpg" alt="Market analysis">
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
+      <div>
+        <div class="brand">Hidden Point Capital LLC</div>
+        500 East Hamilton Ave. #1186, Campbell, CA 95008<br>
+        <a href="tel:4088841552">408-884-1552</a>
+      </div>
       <div>&copy; <span id="year"></span> Hidden Point Capital LLC</div>
-      <div>500 East Hamilton Ave. #1186, Campbell, CA 95008 &middot; 408-884-1552</div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
 </body>
 </html>

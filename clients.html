@@ -11,7 +11,7 @@
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html"><img src="images/logo.png" alt="Hidden Point Capital"></a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
       <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -22,24 +22,31 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Clients</h1>
+  <section class="hero compact" style="background-image:url('images/home-contact.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">Clients</p>
+      <h1>Partnering with investors</h1>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <p class="lead">For information about working with Hidden Point Capital, please <a href="contact.html">contact us</a>.</p>
+    <div class="container reveal" style="max-width:720px">
+      <p class="lead">For information about working with Hidden Point Capital, we'd be glad to hear from you.</p>
+      <div class="cta" style="margin-top:24px"><a class="btn" href="contact.html">Contact us</a></div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
+      <div>
+        <div class="brand">Hidden Point Capital LLC</div>
+        500 East Hamilton Ave. #1186, Campbell, CA 95008<br>
+        <a href="tel:4088841552">408-884-1552</a>
+      </div>
       <div>&copy; <span id="year"></span> Hidden Point Capital LLC</div>
-      <div>500 East Hamilton Ave. #1186, Campbell, CA 95008 &middot; 408-884-1552</div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
 </body>
 </html>

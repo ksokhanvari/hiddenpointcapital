@@ -11,7 +11,7 @@
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html"><img src="images/logo.png" alt="Hidden Point Capital"></a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
       <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -22,17 +22,19 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Contact</h1>
+  <section class="hero compact" style="background-image:url('images/home-contact.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch</h1>
       <p class="sub">For any inquiries, please call or email us or fill in the contact form.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container contact-grid">
-      <div>
-        <h2>Send Us a Message</h2>
+    <div class="container contact-grid reveal">
+      <div class="card">
+        <h2 style="margin-top:0">Send us a message</h2>
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-field">
             <label for="name">Name</label>
@@ -56,7 +58,8 @@
       <div class="addr">
         <strong>Hidden Point Capital LLC</strong>
         500 East Hamilton Ave. #1186<br>
-        Campbell, CA 95008<br><br>
+        Campbell, CA 95008
+        <div class="label">Phone</div>
         <a href="tel:4088841552">408-884-1552</a>
       </div>
     </div>
@@ -64,10 +67,14 @@
 
   <footer class="site-footer">
     <div class="container">
+      <div>
+        <div class="brand">Hidden Point Capital LLC</div>
+        500 East Hamilton Ave. #1186, Campbell, CA 95008<br>
+        <a href="tel:4088841552">408-884-1552</a>
+      </div>
       <div>&copy; <span id="year"></span> Hidden Point Capital LLC</div>
-      <div>500 East Hamilton Ave. #1186, Campbell, CA 95008 &middot; 408-884-1552</div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
