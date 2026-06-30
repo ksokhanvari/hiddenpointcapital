@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Hidden Point Capital</title>
+  <meta name="description" content="Hidden Point Capital is focused on growing investors' portfolios while managing exposure to market volatility.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="Hidden Point Capital"></a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+      <ul id="menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Investing in quantitative adaptive strategies</h1>
+      <p class="sub">Hidden Point Capital is focused on growing investors' portfolios while managing exposure to market volatility.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="lead">Hidden Point Capital is focused on managing a portfolio of long-hedged equities.</p>
+        <p>The fund invests in individual equities and equity-related instruments of companies in the global developed markets, focused primarily on the United States.</p>
+        <p>We use quantitative investing models exclusively to combine multiple independent sources of a potential return to achieve the fund's objectives. Our strategy seeks to maximize expected return subject to a targeted portfolio volatility range. The strategy uses a dynamic allocation methodology that takes into account market volatility, asset volatility, and underlying market momentum while building the portfolio ground up from a set of proprietary factor analysis models.</p>
+        <p>The result is a portfolio of positions that in the long run aims to significantly outperform its benchmarks while providing low beta exposure to markets and downside protection under adverse market conditions.</p>
+        <p>For more information please <a href="contact.html">contact us</a>.</p>
+      </div>
+      <div>
+        <img src="images/home-data-processing.jpeg" alt="Data Processing">
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>Our process</h2>
+      <div class="pillars">
+        <div class="pillar"><a href="approach.html">Security selection</a></div>
+        <div class="pillar"><a href="approach.html">Factor analysis</a></div>
+        <div class="pillar"><a href="approach.html">Sector ranking</a></div>
+        <div class="pillar"><a href="approach.html">Regime detection</a></div>
+        <div class="pillar"><a href="approach.html">Position sizing</a></div>
+        <div class="pillar"><a href="approach.html">Continuous re-balancing</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Send Us a Message</h2>
+      <div class="contact-grid">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <div class="addr">
+          <strong>Hidden Point Capital LLC</strong>
+          500 East Hamilton Ave. #1186<br>
+          Campbell, CA 95008<br><br>
+          <a href="tel:4088841552">408-884-1552</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year"></span> Hidden Point Capital LLC</div>
+      <div>500 East Hamilton Ave. #1186, Campbell, CA 95008 &middot; 408-884-1552</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Approach | Hidden Point Capital</title>
+  <meta name="description" content="Quantitative investing made accessible.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="Hidden Point Capital"></a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="approach.html">Approach</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Quantitative investing made accessible</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <h2>Approach</h2>
+        <p>Hidden Point Capital is a quantitative investment management company focused on managing a long/short equity portfolio. We are dedicated to producing exceptional returns for our investors by strictly adhering to quantitative and statistical methods and risk management techniques.</p>
+        <p>The fund invests in individual equities and equity-related instruments of companies in global developed markets, focused primarily on the United States. The fund uses quantitative investing models and approaches exclusively. The fund's strategy combines multiple independent sources of potential returns.</p>
+        <p>We focus on key aspects of the portfolio formation process which is supported by a significant body of academic research and empirical analysis.</p>
+        <h3>Some key components of this rigorous process include:</h3>
+        <ul class="feature-list">
+          <li>Securities universe selection</li>
+          <li>Fundamental and technical multi-factor analysis</li>
+          <li>Sector ranking</li>
+          <li>Tactical exposure based on the market regime</li>
+          <li>Position sizing</li>
+          <li>Continuous portfolio rebalancing</li>
+        </ul>
+        <p>We use machine learning and statistical tools together with massive amounts of pricing data, fundamental company information and state of the art computational resources to continuously adapt the portfolio to the current market conditions.</p>
+        <p>This approach results in a portfolio of positions that in the long run will provide downside protection under adverse market conditions while providing ample upside participation during periods of positive equity market returns.</p>
+        <p>For more information please <a href="contact.html">contact us</a>.</p>
+      </div>
+      <div>
+        <img src="images/approach-market-analysis.jpg" alt="Market Analysis">
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year"></span> Hidden Point Capital LLC</div>
+      <div>500 East Hamilton Ave. #1186, Campbell, CA 95008 &middot; 408-884-1552</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
