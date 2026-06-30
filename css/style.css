@@ -166,22 +166,7 @@ p { margin: 0 0 20px; }
   border-color: var(--accent);
   color: var(--ink);
 }
-.pillar .num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, #4d86ff 0%, #2f6fed 100%);
-  color: #fff;
-  font-family: "Space Grotesk";
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .02em;
-  box-shadow: 0 8px 18px -8px rgba(47,111,237,.7);
-}
-.pillar h3 { margin: 16px 0 0; font-size: 19px; color: var(--ink); }
+.pillar h3 { margin: 0; font-size: 19px; color: var(--ink); }
 .pillar:hover h3 { color: var(--accent-deep); }
 
 /* Lists */
