@@ -92,7 +92,7 @@ h1, h2, h3 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spacing: 
   text-transform: uppercase; letter-spacing: .22em; font-size: 13px; font-weight: 600;
   color: #8fb4ff; margin: 0 0 18px;
 }
-.hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 700; margin: 0 0 18px; }
+.hero h1 { font-size: clamp(34px, 5vw, 54px); font-weight: 700; line-height: 1.08; letter-spacing: -.02em; margin: 0 0 18px; }
 .hero .sub { font-size: clamp(17px, 2vw, 21px); color: #d7e0ee; margin: 0; max-width: 620px; }
 .hero .cta { margin-top: 32px; }
 
@@ -137,10 +137,10 @@ h1, h2, h3 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spacing: 
 .section.alt { background: var(--bg-alt); }
 .section.dark { background: var(--dark); color: #cdd6e6; }
 .section.dark h2 { color: #fff; }
-.eyebrow-dark { text-transform: uppercase; letter-spacing: .18em; font-size: 13px; font-weight: 600; color: var(--accent); margin: 0 0 14px; }
-.section h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 700; margin: 0 0 24px; }
-.section h3 { font-size: 21px; font-weight: 600; margin: 34px 0 14px; }
-.lead { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.6; color: var(--ink); font-weight: 500; }
+.eyebrow-dark { text-transform: uppercase; letter-spacing: .16em; font-size: 13px; font-weight: 600; color: var(--accent); margin: 0 0 14px; }
+.section h2 { font-size: clamp(28px, 3.4vw, 38px); font-weight: 700; line-height: 1.18; margin: 0 0 20px; }
+.section h3 { font-size: 22px; font-weight: 600; line-height: 1.35; margin: 32px 0 12px; }
+.lead { font-size: clamp(18px, 1.7vw, 20px); line-height: 1.65; color: var(--ink); font-weight: 500; }
 .section.dark .lead { color: #eaf0fa; }
 p { margin: 0 0 20px; }
 .muted { color: var(--muted); }
