@@ -28,4 +28,36 @@ document.addEventListener('DOMContentLoaded', function () {
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
+
+  // Formspree AJAX submit — sends without leaving the page, shows inline status
+  document.querySelectorAll('.fs-form').forEach(function (form) {
+    var status = form.querySelector('.form-status');
+    var btn = form.querySelector('[type="submit"]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var original = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      if (status) { status.className = 'form-status'; status.textContent = ''; }
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          form.reset();
+          if (status) { status.className = 'form-status ok'; status.textContent = 'Thanks — your message has been sent.'; }
+        } else {
+          return res.json().then(function (data) {
+            var msg = (data && data.errors) ? data.errors.map(function (x) { return x.message; }).join(', ')
+                                            : 'Sorry, something went wrong. Please try again.';
+            if (status) { status.className = 'form-status err'; status.textContent = msg; }
+          });
+        }
+      }).catch(function () {
+        if (status) { status.className = 'form-status err'; status.textContent = 'Network error — please try again.'; }
+      }).finally(function () {
+        if (btn) { btn.disabled = false; btn.textContent = original; }
+      });
+    });
+  });
 });
