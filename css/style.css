@@ -169,6 +169,36 @@ p { margin: 0 0 20px; }
 .pillar h3 { margin: 0; font-size: 19px; color: var(--ink); }
 .pillar:hover h3 { color: var(--accent-deep); }
 
+/* Feature cards (Approach: key components) */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 34px;
+}
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px 26px;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.feature-card h3 {
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: var(--ink);
+  border-bottom: 2px solid rgba(90,139,255,.4);
+  display: inline-block;
+}
+.feature-card p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.6; }
+@media (max-width: 700px) { .feature-cards { grid-template-columns: 1fr; } }
+
 /* Lists */
 .feature-list { list-style: none; padding: 0; margin: 0 0 20px; }
 .feature-list li { position: relative; padding-left: 30px; margin-bottom: 12px; }
