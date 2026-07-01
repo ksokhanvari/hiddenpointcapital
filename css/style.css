@@ -174,39 +174,43 @@ p { margin: 0 0 20px; }
 .pipeline .step {
   position: relative;
   display: grid;
-  grid-template-columns: 46px 1fr;
-  gap: 22px;
-  padding-bottom: 30px;
+  grid-template-columns: 22px 1fr;
+  gap: 24px;
+  padding-bottom: 34px;
 }
 .pipeline .step:last-child { padding-bottom: 0; }
 /* connector line linking each node to the next */
 .pipeline .step::before {
   content: "";
   position: absolute;
-  left: 22px;
-  top: 48px;
+  left: 5px;
+  top: 20px;
   bottom: -2px;
   width: 2px;
-  background: linear-gradient(180deg, var(--accent), rgba(90,139,255,.18));
+  background: linear-gradient(180deg, var(--accent), rgba(90,139,255,.14));
 }
 .pipeline .step:last-child::before { display: none; }
-.step-marker {
-  width: 46px;
-  height: 46px;
+.step-dot {
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, #4d86ff 0%, #2f6fed 100%);
-  color: #fff;
-  font-family: "Space Grotesk";
-  font-weight: 700;
-  font-size: 17px;
-  box-shadow: 0 8px 18px -8px rgba(47,111,237,.7);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(90,139,255,.15), 0 0 12px rgba(47,111,237,.55);
   position: relative;
   z-index: 2;
 }
-.step-body { padding-top: 8px; }
+.step-body { padding-top: 0; }
+.step-num {
+  display: block;
+  font-family: "Space Grotesk";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
 .step-body h3 { margin: 0 0 6px; font-size: 18px; color: var(--ink); }
 .step-body p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.6; }
 
