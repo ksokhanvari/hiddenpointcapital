@@ -36,26 +36,4 @@ body::before {
     0 10px 34px -8px rgba(47,111,237,.32);
 }
 
-/* 3) Gradient section headings (large titles only) */
-.section h2 {
-  background: linear-gradient(92deg, #eef3fd 0%, #a9c4ff 55%, #6f9cff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-/* 4) Shrinking sticky header */
-.site-header { transition: background .25s ease, box-shadow .25s ease; }
-.nav { transition: padding .25s ease; }
-.nav .logo img { transition: height .25s ease; }
-.site-header.scrolled {
-  background: rgba(16,20,28,.92);
-  box-shadow: 0 10px 30px -12px rgba(0,0,0,.6);
-}
-.site-header.scrolled .nav { padding-top: 8px; padding-bottom: 8px; }
-.site-header.scrolled .logo img { height: 84px; }
-
-@media (prefers-reduced-motion: reduce) {
-  .site-header, .nav, .nav .logo img { transition: none; }
-}
+/* (Gradient headings and shrinking header were removed by request.) */
