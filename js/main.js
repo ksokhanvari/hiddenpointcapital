@@ -20,4 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     els.forEach(function (el) { el.classList.add('in'); });
   }
+
+  // Shrinking sticky header (used by enhance.css; harmless if that layer is removed)
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 40); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 });

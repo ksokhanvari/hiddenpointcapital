@@ -1,0 +1,61 @@
+/* =====================================================================
+   REFINED ENHANCEMENTS (optional layer)
+   Loaded AFTER style.css. Purely additive — safe to remove.
+
+   TO TURN OFF: remove the <link ... enhance.css> line from each .html
+   page (or run: git revert of the commit that added this file).
+   The small header-shrink script in js/main.js is harmless if left in.
+   ===================================================================== */
+
+/* 1) Ambient background glow — soft depth behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(620px 440px at 10% 6%,  rgba(47,111,237,.16), transparent 70%),
+    radial-gradient(720px 520px at 90% 20%, rgba(90,139,255,.10), transparent 70%),
+    radial-gradient(680px 600px at 50% 112%, rgba(47,111,237,.12), transparent 72%);
+}
+
+/* 2) Glass cards + hover glow */
+.pillar,
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.pillar:hover {
+  border-color: rgba(90,139,255,.55);
+  box-shadow:
+    0 0 0 1px rgba(90,139,255,.22),
+    0 18px 44px -16px rgba(0,0,0,.65),
+    0 10px 34px -8px rgba(47,111,237,.32);
+}
+
+/* 3) Gradient section headings (large titles only) */
+.section h2 {
+  background: linear-gradient(92deg, #eef3fd 0%, #a9c4ff 55%, #6f9cff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 4) Shrinking sticky header */
+.site-header { transition: background .25s ease, box-shadow .25s ease; }
+.nav { transition: padding .25s ease; }
+.nav .logo img { transition: height .25s ease; }
+.site-header.scrolled {
+  background: rgba(16,20,28,.92);
+  box-shadow: 0 10px 30px -12px rgba(0,0,0,.6);
+}
+.site-header.scrolled .nav { padding-top: 8px; padding-bottom: 8px; }
+.site-header.scrolled .logo img { height: 84px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header, .nav, .nav .logo img { transition: none; }
+}
