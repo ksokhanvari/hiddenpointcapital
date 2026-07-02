@@ -53,7 +53,7 @@ h1, h2, h3 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spacing: 
   max-width: var(--max);
   margin: 0 auto;
 }
-.nav .logo img { height: 136px; width: auto; }
+.nav .logo img { height: 180px; width: auto; }
 .nav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; }
 .nav a {
   color: var(--ink);
@@ -291,7 +291,7 @@ p { margin: 0 0 20px; }
 /* Responsive */
 @media (max-width: 820px) {
   .nav ul {
-    display: none; position: absolute; top: 164px; left: 0; right: 0;
+    display: none; position: absolute; top: 208px; left: 0; right: 0;
     flex-direction: column; background: var(--bg-alt); padding: 20px 28px; gap: 20px;
     border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
   }
